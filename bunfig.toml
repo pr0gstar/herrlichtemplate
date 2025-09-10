@@ -1,0 +1,5 @@
+[install.scopes]
+"@herrlich-digital" = { token = "$NPM_TOKEN", url = "https://npm.pkg.github.com/" }
+
+[run]
+bun = true
