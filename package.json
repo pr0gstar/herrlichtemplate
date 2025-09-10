@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "template-test",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,12 +9,18 @@
     "typecheck": "react-router typegen && tsc",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "format:check": "prettier . --check",
-    "format:write": "prettier . --write",
-    "generate-feeds": "bun run scripts/generate-feeds.ts"
+    "format:write": "prettier . --write"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-organize-imports",
+      "prettier-plugin-tailwindcss"
+    ]
   },
   "dependencies": {
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.7.1",
+    "@tailwindcss/typography": "^0.5.16",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "isbot": "^5.1.27",
@@ -26,34 +32,32 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@eslint/css": "^0.11.0",
+    "@eslint/js": "^9.35.0",
+    "@eslint/json": "^0.13.2",
+    "@eslint/markdown": "^7.2.0",
     "@react-router/dev": "^7.7.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/vite": "^4.1.4",
     "@types/node": "^20",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
-    "eslint": "^9.17.0",
+    "eslint": "^9.35.0",
     "eslint-plugin-import-x": "^4.7.0",
-    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.1.0",
-    "globals": "^15.14.0",
+    "globals": "^16.4.0",
     "prettier": "^3.4.2",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^4.1.4",
-    "@tailwindcss/typography": "^0.5.18",
+    "tw-animate-css": "^1.3.8",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.18.1",
+    "typescript-eslint": "^8.43.0",
     "vite": "^6.3.3",
     "vite-tsconfig-paths": "^5.1.4"
   },
   "engines": {
     "bun": ">=eval $(grep '^BUN_VERSION' .env)"
-  },
-  "prettier": {
-    "plugins": [
-      "prettier-plugin-organize-imports",
-      "prettier-plugin-tailwindcss"
-    ]
   }
 }
